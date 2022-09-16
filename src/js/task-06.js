@@ -16,9 +16,23 @@
 }
 
 #validation-input.valid {
-  border-color: #4caf50;
+  border-color: #4caf50;//green
 }
 
 #validation-input.invalid {
-  border-color: #f44336;
+  border-color: #f44336; //red
 }*/
+
+const inputId = document.querySelector("#validation-input");
+console.log(inputId.getAttribute("data-length"));
+inputId.addEventListener("blur", onInputBlur);
+
+function onInputBlur(event) {
+  if (event.currentTarget.value.length == inputId.getAttribute("data-length")) {
+    inputId.classList.add("valid");
+    inputId.classList.remove("invalid");
+  } else {
+    inputId.classList.remove("valid");
+    inputId.classList.add("invalid");
+  }
+}

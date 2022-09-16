@@ -28,7 +28,7 @@ const gallery = document.querySelector(".gallery");
 
 const markup = images
   .map(
-    (image) => `<li><img src = ${image.url} alt = ${image.alt} width=700></li>`
+    (image) => `<li><img src = ${image.url} alt = ${image.alt} width=700></li>` // ширину добавила т.к. на моем экране они не помещались :)
   )
   .join("");
 
