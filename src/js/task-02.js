@@ -17,9 +17,17 @@ const ingredients = [
 
 let parent = document.querySelector("#ingredients");
 
-for (let i = 0; i < ingredients.length; i += 1) {
-  let li = document.createElement("li");
-  li.className = "item";
-  li.textContent = ingredients[i];
-  parent.appendChild(li);
-}
+/*const newIngredients = ingredients.map((ingredient) => {
+  const newElement = document.createElement("li");
+  newElement.className = "item";
+  newElement.textContent = ingredient;
+  return newElement;
+});
+parent.append(...newIngredients);*/
+const newIngredients = ingredients.map((ingredient) => {
+  const newElement = document.createElement("li");
+  newElement.className = "item";
+  newElement.textContent = ingredient;
+  return newElement;
+});
+parent.append(...newIngredients);

@@ -28,7 +28,10 @@ console.log(inputId.getAttribute("data-length"));
 inputId.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
-  if (event.currentTarget.value.length == inputId.getAttribute("data-length")) {
+  if (
+    event.currentTarget.value.length ===
+    Number(inputId.getAttribute("data-length"))
+  ) {
     inputId.classList.add("valid");
     inputId.classList.remove("invalid");
   } else {

@@ -11,9 +11,5 @@ const refs = {
 refs.input.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-  if (event.currentTarget.value.trim() === "") {
-    refs.span.textContent = "Anonymous";
-  } else {
-    refs.span.textContent = event.currentTarget.value;
-  }
+  refs.span.textContent = event.currentTarget.value.trim() || "Anonymous";
 }
